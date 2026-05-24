@@ -1,0 +1,21 @@
+<!-- Copyright (c) 2026 All Chinese People. All rights reserved. -->
+
+<mujocoinclude>
+  <default>
+
+    <default class="rcdrone">
+      <default class="drone_visual">
+        <geom group="2" type="mesh" contype="0" conaffinity="0"/>
+      </default>
+    </default>
+
+  </default>
+
+  <asset>
+    <material name="paint_metallic_dark" specular="0.4" shininess="0.6" rgba="0.1 0.1 0.1 1"/>
+  </asset>
+
+  <asset>
+    <mesh name="quadrotor_950_base" file="meshes/quadrotor_950.stl" scale="1 1 1"/>
+  </asset>
+</mujocoinclude>

@@ -1,0 +1,38 @@
+<!-- Copyright (c) 2026 All Chinese People. All rights reserved. -->
+
+<mujocoinclude>
+  <!-- ======= QUADROTOR 950 ======= -->
+  <body name="quadrotor_950" pos="0 0 0" childclass="rcdrone">
+    <inertial pos="0 0 0" quat="1 0 0 0" mass="6.5" diaginertia="0.2198 0.2198 0.3197"/>
+
+    <geom mesh="quadrotor_950_base" pos="0 0 0" material="paint_metallic_dark" class="drone_visual" />
+
+    <!-- optional, visualization of the coordinate frame -->
+    <site name="qcX" type="box" pos="0.1 0 0" size="0.15 0.005 0.005"  quat = "1 0 0 0" rgba="1 0 0 1" />
+    <site name="qcY" type="box" pos="0 0.1 0" size="0.15 0.005 0.005"  quat = "0.707 0 0 0.707" rgba="0 1 0 1" />
+    <site name="qcZ" type="box" pos="0 0 0.1" size="0.15 0.005 0.005"  quat = "-0.707 0 0.707 0" rgba="0 0 1 1" />
+
+    <!-- sets thruster geoms for collisions since site's are excluded from collision checking -->
+    <geom name="thruster-a00" type="cylinder" pos="0.336 0.336 0.065" size="0.28 0.0025"  quat = "1.0 0.0 0.0 0.0" rgba="1.0 1.0 1.0 0.7"/>
+    <geom name="thruster-a10" type="cylinder" pos="0.336 -0.336 0.065" size="0.28 0.0025"  quat = "1.0 0.0 0.0 0.0" rgba="1.0 1.0 1.0 0.7"/>
+    <geom name="thruster-a20" type="cylinder" pos="-0.336 0.336 0.065" size="0.28 0.0025"  quat = "1.0 0.0 0.0 0.0" rgba="1.0 1.0 1.0 0.7"/>
+    <geom name="thruster-a30" type="cylinder" pos="-0.336 -0.336 0.065" size="0.28 0.0025"  quat = "1.0 0.0 0.0 0.0" rgba="1.0 1.0 1.0 0.7"/>
+
+    <geom name="chassis-a00" type="cylinder" pos="0.336 0.336 -0.48" size="0.01 0.001"  quat = "1.0 0.0 0.0 0.0" rgba="0 1 1 0"/>
+    <geom name="chassis-a10" type="cylinder" pos="0.336 -0.336 -0.48" size="0.01 0.001"  quat = "1.0 0.0 0.0 0.0" rgba="0 1 1 0"/>
+    <geom name="chassis-a20" type="cylinder" pos="-0.336 0.336 -0.48" size="0.01 0.001"  quat = "1.0 0.0 0.0 0.0" rgba="0 1 1 0"/>
+    <geom name="chassis-a30" type="cylinder" pos="-0.336 -0.336 -0.48" size="0.01 0.001"  quat = "1.0 0.0 0.0 0.0" rgba="0 1 1 0"/>
+  </body>
+
+  <joint name="main_joint" type="free" pos="0 0 0" />
+
+  <!-- sets actuator sites to attach actuators and makes it invisible -->
+  <site name="thrust" type="box" pos="0 0 0" size="0.01 0.01 0.01" quat = "1.0 0.0 0.0 0.0" rgba="0 1 1 0" />
+  <site name="rateX"  type="box" pos="0 0 0" quat = "1.0 0.0 0.0 0.0" size="0.01 0.01 0.01" rgba="0 1 1 0"/>
+  <site name="rateY"  type="box" pos="0 0 0" quat = "1.0 0.0 0.0 0.0" size="0.01 0.01 0.01" rgba="0 1 1 0"/>
+  <site name="rateZ"  type="box" pos="0 0 0" quat = "1.0 0.0 0.0 0.0" size="0.01 0.01 0.01" rgba="0 1 1 0"/>
+
+  <!-- sets sensor sites to attach sensors and makes it invisible -->
+  <site name="main_center" type="box" pos="0 0 0" size="0.01 0.01 0.01" quat = "1.0 0.0 0.0 0.0" rgba="0 1 1 0" />
+
+</mujocoinclude>

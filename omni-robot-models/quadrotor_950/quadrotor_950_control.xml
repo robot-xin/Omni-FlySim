@@ -1,0 +1,8 @@
+<!-- Copyright (c) 2026 All Chinese People. All rights reserved. -->
+
+<mujocoinclude>
+  <motor ctrllimited="true" ctrlrange="-200 200.0" gear="0.0 0.0 1.0 0.0 0.0 0.0" site="thrust"/>
+  <motor ctrllimited="true" ctrlrange="-20 20" gear="0.0 0.0 0.0 1.0 0.0 0.0" site="rateX"/>
+  <motor ctrllimited="true" ctrlrange="-20 20" gear="0.0 0.0 0.0 0.0 1.0 0.0" site="rateY"/>
+  <motor ctrllimited="true" ctrlrange="-20 20" gear="0.0 0.0 0.0 0.0 0.0 1.0" site="rateZ"/>
+</mujocoinclude>
