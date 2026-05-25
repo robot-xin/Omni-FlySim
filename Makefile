@@ -14,7 +14,7 @@ PROJECT_PATH := $(dir $(MKFILE_PATH))
 help:
 	@echo ""
 	@echo "Usage: make [OPTION] "
-	@echo "make init                 installs the python libs and clones the px4 code "
+	@echo "make host-init            installs the python libs and clones the px4 code "
 	@echo "make host-config          updates the px4 configs "
 	@echo "make host-build           builds the px4 code and generate the binary "
 	@echo "make host-clean           cleans the px4 binary "
@@ -24,9 +24,9 @@ help:
 
 
 # make targets for OMNI-FlySim.
-.PHONY: init host-config host-build host-clean host-run
+.PHONY: host-init host-config host-build host-clean host-run
 
-init:
+host-init:
 	@echo "[OK]"
 
 host-config:
