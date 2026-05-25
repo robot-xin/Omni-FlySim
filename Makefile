@@ -14,7 +14,7 @@ PROJECT_PATH := $(dir $(MKFILE_PATH))
 help:
 	@echo ""
 	@echo "Usage: make [OPTION] "
-	@echo "make host-init            clones the px4 code "
+	@echo "make host-init            clones the px4 code and installs the dependencies"
 	@echo "make host-config          updates the conda env and the px4 configs "
 	@echo "make host-build           builds the px4 code and generate the binary "
 	@echo "make host-clean           cleans the px4 binary "
