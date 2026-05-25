@@ -1,4 +1,4 @@
-<!-- Copyright (c) 2026 All Chinese People. All rights reserved. -->
+<!-- Copyright (c) 2026 The Omni-FlySim Authors. All rights reserved. -->
 
 <mujocoinclude>
   <position name="joint1" ctrllimited="true" ctrlrange="-3.151 2.089"  joint="joint1" kp="1000" user="1" forcelimited="true" forcerange="-300 300"/>

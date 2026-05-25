@@ -1,4 +1,4 @@
-# Copyright (c) 2026 All Chinese People. All rights reserved.
+# Copyright (c) 2026 The Omni-FlySim Authors. All rights reserved.
 
 
 # sets the basic configs.
@@ -14,8 +14,8 @@ PROJECT_PATH := $(dir $(MKFILE_PATH))
 help:
 	@echo ""
 	@echo "Usage: make [OPTION] "
-	@echo "make host-init            installs the python libs and clones the px4 code "
-	@echo "make host-config          updates the px4 configs "
+	@echo "make host-init            clones the px4 code and installs the dependencies"
+	@echo "make host-config          updates the conda env and the px4 configs "
 	@echo "make host-build           builds the px4 code and generate the binary "
 	@echo "make host-clean           cleans the px4 binary "
 	@echo "make host-run             starts the px4 and mujoco "
@@ -27,6 +27,7 @@ help:
 .PHONY: host-init host-config host-build host-clean host-run
 
 host-init:
+	@bash "$(REPO_ROOT)/scripts/host_init.sh"
 	@echo "[OK]"
 
 host-config:
