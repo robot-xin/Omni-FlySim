@@ -31,7 +31,7 @@ OPTION_UPDATE_ENV="false"
 OPTION_DEBUG="false"
 
 SCRIPT_DIR="$(builtin cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
-REPO_ROOT="${SCRIPT_DIR}"
+export REPO_ROOT="${SCRIPT_DIR}"
 
 parse_commandline() {
     local key

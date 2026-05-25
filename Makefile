@@ -27,6 +27,7 @@ help:
 .PHONY: host-init host-config host-build host-clean host-run
 
 host-init:
+	@bash "$(REPO_ROOT)/scripts/host_init.sh"
 	@echo "[OK]"
 
 host-config:
