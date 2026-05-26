@@ -34,6 +34,7 @@ host-config:
 	@echo "[OK]"
 
 host-build:
+	@bash "$(REPO_ROOT)/scripts/host_build.sh"
 	@echo "[OK]"
 
 host-clean:
