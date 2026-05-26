@@ -38,6 +38,7 @@ host-build:
 	@echo "[OK]"
 
 host-clean:
+	@bash "$(REPO_ROOT)/scripts/host_clean.sh"
 	@echo "[OK]"
 
 host-run:
