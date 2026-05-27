@@ -10,11 +10,11 @@ from pathlib import Path
 from typing import Optional
 from dataclasses import dataclass
 
-from common import SanitizeVector
-from common import ClampUint64
-from common import SanitizeFloat
-from common import ClampUint32
-from common import ClampUint8
+from .common import SanitizeVector
+from .common import ClampUint64
+from .common import SanitizeFloat
+from .common import ClampUint32
+from .common import ClampUint8
 
 os.environ.setdefault("MAVLINK20", "1")
 from pymavlink import mavutil
