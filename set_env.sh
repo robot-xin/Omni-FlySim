@@ -197,5 +197,11 @@ unset OPTION_SHOW_HELP
 unset OPTION_UPDATE_ENV
 unset OPTION_DEBUG
 
+export PYTHONPATH="${PYTHONPATH}:$(pwd)"
+export PYTHONDONTWRITEBYTECODE=1
+
+echo -e "${gre}[INFO]${end} PYTHONPATH has been setted"
+echo -e "${gre}[INFO]${end} PYTHONDONTWRITEBYTECODE has been set to: $PYTHONDONTWRITEBYTECODE"
+
 echo -e "${gre}[INFO]${end} sim enviroment setup ok."
 echo -e "using 'omni help' to continue..."
