@@ -3,7 +3,7 @@
 <mujocoinclude>
   <!-- ======= QUADROTOR 950 ======= -->
   <body name="quadrotor_950" pos="0 0 0" childclass="rcdrone">
-    <inertial pos="0 0 0" quat="1 0 0 0" mass="6.5" diaginertia="0.2198 0.2198 0.3197"/>
+    <inertial pos="0 0 0" quat="1 0 0 0" mass="9.5" diaginertia="0.2198 0.2198 0.3197"/>
 
     <geom mesh="quadrotor_950_base" pos="0 0 0" material="paint_metallic_dark" class="drone_visual" />
 
@@ -26,11 +26,10 @@
 
   <joint name="main_joint" type="free" pos="0 0 0" />
 
-  <!-- sets actuator sites to attach actuators and makes it invisible -->
-  <site name="thrust" type="box" pos="0 0 0" size="0.01 0.01 0.01" quat = "1.0 0.0 0.0 0.0" rgba="0 1 1 0" />
-  <site name="rateX"  type="box" pos="0 0 0" quat = "1.0 0.0 0.0 0.0" size="0.01 0.01 0.01" rgba="0 1 1 0"/>
-  <site name="rateY"  type="box" pos="0 0 0" quat = "1.0 0.0 0.0 0.0" size="0.01 0.01 0.01" rgba="0 1 1 0"/>
-  <site name="rateZ"  type="box" pos="0 0 0" quat = "1.0 0.0 0.0 0.0" size="0.01 0.01 0.01" rgba="0 1 1 0"/>
+  <site name="motor_0_site" type="sphere" pos="0.336 -0.336 0.065"  size="0.015" rgba="1.0 0.2 0.2 0.3"/>
+  <site name="motor_1_site" type="sphere" pos="-0.336 0.336 0.065"  size="0.015" rgba="1.0 0.2 0.2 0.3"/>
+  <site name="motor_2_site" type="sphere" pos="0.336 0.336 0.065"   size="0.015" rgba="0.2 1.0 0.2 0.3"/>
+  <site name="motor_3_site" type="sphere" pos="-0.336 -0.336 0.065" size="0.015" rgba="0.2 1.0 0.2 0.3"/>
 
   <!-- sets sensor sites to attach sensors and makes it invisible -->
   <site name="main_center" type="box" pos="0 0 0" size="0.01 0.01 0.01" quat = "1.0 0.0 0.0 0.0" rgba="0 1 1 0" />
