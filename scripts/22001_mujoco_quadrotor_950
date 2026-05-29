@@ -1,0 +1,75 @@
+#!/bin/sh
+#
+# Copyright (c) 2026 The Omni-FlySim Authors. All rights reserved.
+
+. ${R}etc/init.d/rc.mc_defaults
+
+PX4_SIMULATOR=${PX4_SIMULATOR:=mujoco}
+PX4_SIM_MODEL=${PX4_SIM_MODEL:=mujoco_quadrotor_950}
+
+# sets the control allocation
+param set-default CA_AIRFRAME 0
+param set-default CA_METHOD 2
+param set-default CA_ROTOR_COUNT 4
+
+# sets the rotor geometry
+param set-default CA_ROTOR0_PX 1.0
+param set-default CA_ROTOR0_PY 1.0
+param set-default CA_ROTOR0_PZ 0.0
+param set-default CA_ROTOR0_AX 0.0
+param set-default CA_ROTOR0_AY 0.0
+param set-default CA_ROTOR0_AZ -1.0
+param set-default CA_ROTOR0_CT 6.5
+param set-default CA_ROTOR0_KM 0.05
+
+param set-default CA_ROTOR1_PX -1.0
+param set-default CA_ROTOR1_PY -1.0
+param set-default CA_ROTOR1_PZ 0.0
+param set-default CA_ROTOR1_AX 0.0
+param set-default CA_ROTOR1_AY 0.0
+param set-default CA_ROTOR1_AZ -1.0
+param set-default CA_ROTOR1_CT 6.5
+param set-default CA_ROTOR1_KM 0.05
+
+param set-default CA_ROTOR2_PX 1.0
+param set-default CA_ROTOR2_PY -1.0
+param set-default CA_ROTOR2_PZ 0.0
+param set-default CA_ROTOR2_AX 0.0
+param set-default CA_ROTOR2_AY 0.0
+param set-default CA_ROTOR2_AZ -1.0
+param set-default CA_ROTOR2_CT 6.5
+param set-default CA_ROTOR2_KM -0.05
+
+param set-default CA_ROTOR3_PX -1.0
+param set-default CA_ROTOR3_PY 1.0
+param set-default CA_ROTOR3_PZ 0.0
+param set-default CA_ROTOR3_AX 0.0
+param set-default CA_ROTOR3_AY 0.0
+param set-default CA_ROTOR3_AZ -1.0
+param set-default CA_ROTOR3_CT 6.5
+param set-default CA_ROTOR3_KM -0.05
+
+# sets the output mapping for sitl
+param set-default PWM_MAIN_FUNC1 101
+param set-default PWM_MAIN_FUNC2 102
+param set-default PWM_MAIN_FUNC3 103
+param set-default PWM_MAIN_FUNC4 104
+
+# sets the hover thrust
+param set-default MPC_THR_HOVER 0.50
+
+# sets the EKF2
+param set-default EKF2_EV_CTRL 0
+param set-default EKF2_EV_DELAY 0
+param set-default EKF2_HGT_REF 1
+param set-default EKF2_GPS_CTRL 7
+
+# sest the failsafe config and the arming config
+param set-default NAV_DLL_ACT 0
+param set-default COM_ARM_CHK_ESCS 0
+param set-default CBRK_SUPPLY_CHK 894281
+
+# sets the mag calibration params
+param set CAL_MAG0_ID 197388
+param set CAL_MAG0_PRIO 50
+param set CAL_MAG0_XOFF 0.01

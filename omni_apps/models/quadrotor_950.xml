@@ -1,0 +1,30 @@
+<!-- Copyright (c) 2026 The Omni-FlySim Authors. All rights reserved. -->
+
+<mujoco model="omni_quadrotor_950">
+  <compiler angle="radian" autolimits="true"/>
+
+  <include file="../../robot_models/scenes/ground.xml"/>
+
+  <include file="../../robot_models/quadrotor_950/quadrotor_950_dependencies.xml"/>
+
+  <worldbody>
+    <body name="quadrotor_950_pos" pos="0 0 1">
+      <light name="follow_light_quadrotor"
+             pos="0 0 1.2"
+             dir="0 0 -1"
+             mode="targetbodycom"
+             target="quadrotor_950_pos"
+             directional="true"/>
+      <include file="../../robot_models/quadrotor_950/quadrotor_950.xml"/>
+    </body>
+  </worldbody>
+
+  <actuator>
+    <include file="../../robot_models/quadrotor_950/quadrotor_950_control.xml"/>
+  </actuator>
+
+  <sensor>
+    <include file="../../robot_models/quadrotor_950/quadrotor_950_sensor.xml"/>
+  </sensor>
+
+</mujoco>

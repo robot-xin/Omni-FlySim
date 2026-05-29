@@ -1,0 +1,8 @@
+<!-- Copyright (c) 2026 The Omni-FlySim Authors. All rights reserved. -->
+
+<mujocoinclude>
+  <motor name="motor_0" site="motor_0_site" ctrllimited="true" ctrlrange="0 50" gear="0 0 1 0 0 -0.05"/>
+  <motor name="motor_1" site="motor_1_site" ctrllimited="true" ctrlrange="0 50" gear="0 0 1 0 0 -0.05"/>
+  <motor name="motor_2" site="motor_2_site" ctrllimited="true" ctrlrange="0 50" gear="0 0 1 0 0 0.05"/>
+  <motor name="motor_3" site="motor_3_site" ctrllimited="true" ctrlrange="0 50" gear="0 0 1 0 0 0.05"/>
+</mujocoinclude>

@@ -3,5 +3,8 @@
 <mujocoinclude>
   <gyro name="body_gyro" site="main_center"/>
   <accelerometer name="body_linacc" site="main_center"/>
+  <magnetometer name="body_mag" site="main_center" />
   <framequat name="body_quat" objtype="site" objname="main_center"/>
+  <framelinvel name="body_linvel" objtype="site" objname="main_center" />
+  <framelinacc name="body_frameacc" objtype="site" objname="main_center" />
 </mujocoinclude>

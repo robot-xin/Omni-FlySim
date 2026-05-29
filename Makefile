@@ -31,6 +31,7 @@ host-init:
 	@echo "[OK]"
 
 host-config:
+	@bash "$(REPO_ROOT)/scripts/host_config.sh"
 	@echo "[OK]"
 
 host-build:
